@@ -1,13 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
 
 nav {
-  background-color: rgb(100, 78, 121);
-  color: white;
+  background-color: rgb(53, 53, 53);
+  color: rgb(163, 163, 163);
   padding: 0;
   margin: 0;
   display: flex;
   align-items: center;
   border-radius: 12px;
+  font-weight: 800;
 }
 nav ul {
   list-style: none;
@@ -15,12 +16,27 @@ nav ul {
 
 body {
   font-family: "Roboto", sans-serif;
+  background-image: url("Triple Black (8K).png");
+  background-size: 200%;
 }
 
 .grid {
   display: grid;
+  position: relative;
   grid-template-columns: repeat(3, 10vw);
   grid-template-rows: repeat(3, 10vw);
+}
+
+.xo{
+  color: rgb(170, 170, 170);
+}
+
+.line{
+    background-color: rgb(166, 166, 166);
+    height: 3px;
+    width: 0%;
+    position: absolute;
+    transition: 500ms ease-in-out;
 }
 
 .main {
@@ -29,7 +45,7 @@ body {
   justify-content: center;
 }
 .container {
-  border: 2px solid black;
+  border: 2px solid rgb(78, 78, 78);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -42,14 +58,17 @@ body {
   justify-items: center;
   align-items: center;
   padding: 0vw 6vw;
+  color: rgb(177, 177, 177);
 }
 .container:hover {
-  background-color: rgb(237, 175, 237);
+  background-color: rgb(124, 124, 124);
+  opacity: 0.5;
+  cursor: pointer;
 }
 .gameinfo button {
   border-radius: 10px;
-  border: 3px solid rgb(210, 164, 210);
-  background-color: rgb(221, 191, 221);
+  border: 3px solid rgb(66, 66, 66);
+  background-color: rgb(106, 106, 106);
   padding: 8px 20px;
   margin: 2vw 0vw;
   width: 100px;
@@ -88,6 +107,9 @@ img {
     .main {
       flex-wrap: wrap;
     }
+    body{
+      background-size: 300%;
+    }
     .grid {
       display: grid;
       grid-template-columns: repeat(3, 15vw);
@@ -101,6 +123,9 @@ img {
 @media screen and (max-width: 600px) {
   .main {
     flex-wrap: wrap;
+  }
+  body{
+    background-size: 400%;
   }
   .grid {
     display: grid;
