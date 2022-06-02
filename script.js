@@ -27,6 +27,7 @@ const checkWin = () => {
       gameOver = true;
       document.querySelector(".chance").textContent = boxes[i[0]].textContent + " WON !";
       document.getElementById("gif").style.width = "200px";
+      document.getElementsByClassName("chance")[0].style.fontWeight="700";
     }
   });
 };
@@ -56,5 +57,6 @@ reset.addEventListener("click", () => {
   turn = "O";
   gameOver = false;
   document.getElementsByClassName("chance")[0].textContent = "Turn of " + turn;
+  document.getElementsByClassName("chance")[0].style.fontWeight = "400";
   document.getElementById("gif").style.width="0px";
 });
